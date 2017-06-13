@@ -1,6 +1,6 @@
 // var female = {
-//   name: "Celina",
-//   age: 21,
+//   name: "Cel",
+//   age: 27,
 //   talk: function() {
 //     alert("hello wassup");
 //   }
@@ -10,7 +10,7 @@
 //     return a + b;
 // };
 //
-// var shoppingList = ['eggs', 'milk', 'chicken'];
+// var array= ['item1', 'item2', 'item3'];
 
 var pageHeader = document.getElementById('page-header');
 document.getElementById('text-change').onclick = function(){tChange()};
