@@ -1,6 +1,7 @@
 ---
 layout: index
 ---
+
 # DOM - Document Object Model
 
 ## Getting an Element
@@ -48,3 +49,5 @@ function colorChange(element, clr) {
 <bbr>
 
 <button class ="btn" id="query" type="button">Click Me!</button>
+<br><br>
+<a href="http://htmldog.com/guides/javascript/">Source</a>

@@ -62,6 +62,9 @@ h3 {
 h4 {
   color: blue;
 }
+a {
+  text-decoration: none;
+}
 pre{
   padding: 15px;
   background-color: #e5e5e5;
