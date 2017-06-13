@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en" class="no-js">
+  <head>
+      <title>JavaScript Test</title>
+      <meta charset="UTF-8">
+      <meta name="description" content="" />
+      <meta name="keywords" content="" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+
+      <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <header>
+      <h1 class = "main-title">JavaScript Test</h1>
+      <div class="content">
+        <h1 id="dom---document-object-model">DOM - Document Object Model</h1>
+
+<h2 id="getting-an-element">Getting an Element</h2>
+<pre><code>document.getElementById
+document.getElementsByTagName
+document.getElementByClassName
+</code></pre>
+
+<h3 id="example">Example</h3>
+
+<pre><code>var pageHeader = document.getElementById('page-header');
+
+document.getElementById('text-change').onclick = function(){textChange()};
+function textChange() {
+  pageHeader.innerHTML = 'Hi JavaScript';
+}
+</code></pre>
+
+<p id="page-header">This should change</p>
+<p><button class="btn" id="text-change" type="button">Click Me!</button>
+<br /><br /></p>
+
+<h2 id="css-selector">CSS Selector</h2>
+<pre><code>document.querySelector</code></pre>
+<p>This returns only one element. If multiple elements match the selector, only the first will be returned. <br /></p>
+
+<pre><code>document.querySelectorAll</code></pre>
+<p>This returns a NodeList.<br /><br /></p>
+
+<h3 id="example-1">Example</h3>
+<p>This will change the text of all elements with the class <code>.btn</code> to blue.</p>
+<pre><code>var pageHeader = document.querySelector('header');
+var buttons = document.querySelectorAll('.btn');
+
+document.getElementById('query').onclick = function(){
+  for(var i = 0; i &lt; buttons.length; i++){
+        colorChange(buttons[i], 'blue');
+  }
+};
+
+function colorChange(element, clr) {
+      element.style.color = clr;
+}
+</code></pre>
+<bbr>
+
+<button class="btn" id="query" type="button">Click Me!</button>
+</bbr>
+
+      </div>
+    </header>
+    <script src="js/script.js"></script>
+  </body>
+</html>
