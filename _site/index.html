@@ -38,6 +38,30 @@ function textChange() {
 <p><button class="btn" id="text-change" type="button">Click Me!</button>
 <br /><br /></p>
 
+<h2 id="changing-html-elements">Changing HTML elements</h2>
+
+<pre><code>//change inner HTML of an element
+element.innerHTML = new html content;
+
+//change attribute value
+element.attribute = new value;
+
+//change attribute value
+element.setAttribute(attribute, value);
+
+//change style
+element,style.property = new style;
+</code></pre>
+
+<h2 id="adding-and-deleting-elements">Adding and Deleting elements</h2>
+
+<pre><code>document.createElement(element);
+document.removeChild(element);
+document.appendChild(element);
+document.replaceChild(element);
+document.write(text);
+</code></pre>
+
 <h2 id="css-selector">CSS Selector</h2>
 <pre><code>document.querySelector</code></pre>
 <p>This returns only one element. If multiple elements match the selector, only the first will be returned. <br /></p>
@@ -60,12 +84,31 @@ function colorChange(element, clr) {
       element.style.color = clr;
 }
 </code></pre>
-<bbr>
 
-<button class="btn" id="query" type="button">Click Me!</button>
-<br /><br />
-<a href="http://htmldog.com/guides/javascript/">Source</a>
-</bbr>
+<p><button class="btn" id="query" type="button">Click Me!</button>
+<br /><br /></p>
+
+<h2 id="events-and-callbacks">Events and Callbacks</h2>
+
+<p>Listen for an event and give a function that will be called by the browser when the event happens -&gt; callback</p>
+
+<pre><code>button.addEventListener(event, function, useCapture);
+</code></pre>
+
+<h3 id="example-2">Example</h3>
+<p>This will make a pop-up appear.</p>
+<pre><code>var popup = document.getElementById("pop-up");
+
+popup.addEventListener('click', alertPop);
+
+function alertPop(event) {
+  alert("Hi Javascript!");
+}
+</code></pre>
+
+<p><button class="btn" id="pop-up" type="button">Click Me!</button></p>
+
+<p><a href="http://htmldog.com/guides/javascript/">Source</a></p>
 
       </div>
     </header>

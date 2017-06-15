@@ -24,6 +24,30 @@ function textChange() {
 <button class="btn" id="text-change" type="button">Click Me!</button>
 <br><br>
 
+## Changing HTML elements
+
+<pre><code>//change inner HTML of an element
+element.innerHTML = new html content;
+
+//change attribute value
+element.attribute = new value;
+
+//change attribute value
+element.setAttribute(attribute, value);
+
+//change style
+element,style.property = new style;
+</code></pre>
+
+## Adding and Deleting elements
+
+<pre><code>document.createElement(element);
+document.removeChild(element);
+document.appendChild(element);
+document.replaceChild(element);
+document.write(text);
+</code></pre>
+
 ## CSS Selector
 <pre><code>document.querySelector</code></pre>
 This returns only one element. If multiple elements match the selector, only the first will be returned. <br>
@@ -46,8 +70,29 @@ function colorChange(element, clr) {
       element.style.color = clr;
 }
 </code></pre>
-<bbr>
 
 <button class ="btn" id="query" type="button">Click Me!</button>
 <br><br>
+
+## Events and Callbacks
+
+Listen for an event and give a function that will be called by the browser when the event happens -> callback
+
+<pre><code>button.addEventListener(event, function, useCapture);
+</code></pre>
+
+### Example
+This will make a pop-up appear.
+<pre><code>var popup = document.getElementById("pop-up");
+
+popup.addEventListener('click', alertPop);
+
+function alertPop(event) {
+  alert("Hi Javascript!");
+}
+</code></pre>
+
+<button class ="btn" id="pop-up" type="button">Click Me!</button>
+
+
 <a href="http://htmldog.com/guides/javascript/">Source</a>
